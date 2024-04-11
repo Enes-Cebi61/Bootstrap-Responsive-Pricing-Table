@@ -1,0 +1,125 @@
+/* Styles for a flex container, centering content both horizontally and vertically */
+body {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Styles for a card component with a gradient background and box shadow */
+.card {
+  position: relative;
+  max-width: 300px;
+  height: auto;
+  background: linear-gradient(-45deg, #fe0847, #feae3f);
+  border-radius: 15px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, .1);
+  transition: .5s;
+}
+
+/* Hover effect to scale the card on mouseover */
+.card:hover {
+  transform: scale(1.1);
+}
+
+/* Different background gradients for individual cards */
+.col-sm-4:nth-child(1) .card,
+.col-sm-4:nth-child(2) .card,
+.col-sm-4:nth-child(3) .card,
+.col-sm-4:nth-child(1) .card .title .fa,
+.col-sm-4:nth-child(2) .card .title .fa,
+.col-sm-4:nth-child(3) .card .title .fa {
+  background: linear-gradient(-45deg, #f403d1, #64b5f6);
+}
+
+/* Styles for a pseudo-element before the card to create a skew effect */
+.card::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: rgba(255, 255, 255, .1);
+  z-index: 1;
+  transform: skewY(-5deg) scale(1.5);
+}
+
+/* Styles for the title icon with a shadow effect */
+.title .fa {
+  color: #fff;
+  font-size: 60px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 100px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, .1);
+}
+
+/* Styles for the title text */
+.title h2 {
+  position: relative;
+  margin: 20px 0 0;
+  padding: 0;
+  color: #fff;
+  font-size: 28px;
+  z-index: 2;
+}
+
+/* Styles for price and option sections */
+.price, .option {
+  position: relative;
+  z-index: 2;
+}
+
+/* Styles for price text */
+.price h4 {
+  margin: 0;
+  padding: 20px 0;
+  color: #fff;
+  font-size: 60px;
+}
+
+/* Styles for option list */
+.option ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Styles for individual option items in the list */
+.option ul li {
+  margin: 0 0 10px;
+  padding: 0;
+  list-style: none;
+  color: #fff;
+  font-size: 16px;
+}
+
+/* Styles for the action button with a shadow effect */
+.card a {
+  position: relative;
+  z-index: 2;
+  background: #fff;
+  color: black;
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 40px;
+  display: block;
+  text-align: center;
+  margin: 20px auto 0;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+}
+
+/* Hover effect to remove underline on the action button */
+.card a:hover {
+  text-decoration: none;
+}
